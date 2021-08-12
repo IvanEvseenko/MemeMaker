@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMaker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="LfT-M5-OT0">
+                                <rect key="frame" x="-157" y="231.5" width="728" height="433"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DEV-4t-iTQ">
+                                        <rect key="frame" x="298.5" y="0.0" width="131" height="32"/>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="segmentControllers:" destination="BYZ-38-t0r" eventType="valueChanged" id="lT0-xB-RJR"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Caption" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQv-cP-eJ6">
+                                        <rect key="frame" x="318" y="51" width="92" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cow" translatesAutoresizingMaskIntoConstraints="NO" id="BKb-AP-NYT">
+                                        <rect key="frame" x="0.0" y="91.5" width="728" height="250"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="250" id="XPl-B3-f3Y"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bottom Caption" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhe-VT-wLz">
+                                        <rect key="frame" x="304.5" y="361.5" width="119.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="KrC-e3-3Cs">
+                                        <rect key="frame" x="298.5" y="402" width="131" height="32"/>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="bottomSegmentController:" destination="BYZ-38-t0r" eventType="valueChanged" id="Yom-dI-lGs"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LfT-M5-OT0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2wM-bA-bbV"/>
+                            <constraint firstItem="LfT-M5-OT0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4oF-3c-Xsc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomCaptionLabel" destination="fhe-VT-wLz" id="C6d-9j-s0f"/>
+                        <outlet property="bottomCaptionSegmentControl" destination="KrC-e3-3Cs" id="mhM-9i-5tS"/>
+                        <outlet property="topCaptionLabel" destination="NQv-cP-eJ6" id="iDp-il-m5H"/>
+                        <outlet property="topCaptionSegmentedControl" destination="DEV-4t-iTQ" id="WBq-By-hJA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="78"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cow" width="728" height="546"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
